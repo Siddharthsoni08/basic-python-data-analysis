@@ -38,3 +38,21 @@ for name, marks in students.items():
 print("\nTopper:")
 print("Name:", topper_name)
 print("Marks:", topper_marks)
+
+
+#Pass / Fail analysis 
+
+pass_students = []
+fail_students = []
+
+for name, marks in students.items():
+    if marks >= 50:
+        pass_students.append(name)
+    else:
+        fail_students.append(name)
+
+print("\nPass Students:")
+print(pass_students)
+
+print("\nFail Students:")
+print(fail_students)
