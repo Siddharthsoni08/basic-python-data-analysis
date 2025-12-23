@@ -24,3 +24,17 @@ print("\nClass Summary:")
 print("Total Marks:", total_marks)
 print("Number of Students:", count)
 print("Class Average:", average_marks)
+
+#Find Class Topper
+
+topper_name = ""
+topper_marks = -1
+
+for name, marks in students.items():
+    if marks > topper_marks:
+        topper_marks = marks
+        topper_name = name
+
+print("\nTopper:")
+print("Name:", topper_name)
+print("Marks:", topper_marks)
