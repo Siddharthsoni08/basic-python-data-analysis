@@ -9,3 +9,18 @@ students = {
 
 print("Student Marks:")
 print(students)
+
+#calculate class avarage
+
+total_marks = 0
+
+for marks in students.values():
+    total_marks = total_marks + marks
+
+count = len(students)
+average_marks = total_marks/count
+
+print("\nClass Summary:")
+print("Total Marks:", total_marks)
+print("Number of Students:", count)
+print("Class Average:", average_marks)
