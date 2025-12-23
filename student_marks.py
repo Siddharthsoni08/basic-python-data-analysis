@@ -1,3 +1,7 @@
+print("\n" + "=" * 40)
+print("STUDENT MARKS ANALYSIS REPORT")
+print("=" * 40)
+
 #student marks data 
 students = {
     "Amit": 78,
@@ -8,7 +12,9 @@ students = {
 }
 
 print("Student Marks:")
-print(students)
+for name, marks in students.items():
+    print(f"{name:10} : {marks}")
+
 
 #calculate class avarage
 
@@ -21,9 +27,9 @@ count = len(students)
 average_marks = total_marks/count
 
 print("\nClass Summary:")
-print("Total Marks:", total_marks)
-print("Number of Students:", count)
-print("Class Average:", average_marks)
+print(f"Total Student   : {count}")
+print(f"Total Marks     : {total_marks}")
+print(f"Class Average   : {average_marks}")
 
 #Find Class Topper
 
@@ -36,8 +42,8 @@ for name, marks in students.items():
         topper_name = name
 
 print("\nTopper:")
-print("Name:", topper_name)
-print("Marks:", topper_marks)
+print(f"Name  : {topper_name}")
+print(f"Marks : {topper_marks}")
 
 
 #Pass / Fail analysis 
@@ -52,7 +58,9 @@ for name, marks in students.items():
         fail_students.append(name)
 
 print("\nPass Students:")
-print(pass_students)
+for name in pass_students:
+    print(f"- {name}")
 
 print("\nFail Students:")
-print(fail_students)
+for name in fail_students:
+    print(f"- {name}")
