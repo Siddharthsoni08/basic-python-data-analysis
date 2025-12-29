@@ -1,9 +1,15 @@
 #Daily Expense Data
 
 expense = [120, 250, 80, 400, 150]
+days = len(expense)
+
+print("\n" + "=" * 40)
+print("DAILY EXPENSE ANALYSIS REPORT")
+print("=" * 40)
 
 print("Daily Expence: ")
-print(expense)
+for i,amount in enumerate(expense, start=1):
+    print(f"Day {i} : ₹{amount}")
 
 # Calculate Total and Average Expense
 
@@ -12,14 +18,13 @@ total_expense = 0
 for amount in expense:
     total_expense = total_expense + amount
 
-days = len(expense)
 
 average_expense = total_expense / days 
 
 print("\nExpense Summary: ")
-print("Total Expense: ", total_expense)
-print("Number Of Days: ", days)
-print("Average Daily Expense: ", average_expense)
+print(f"Total Expense         :   {total_expense}")
+print(f"Number Of Days        :   {days}")
+print(f"Average Daily Expense :   {average_expense}")
 
 #Find High and Low Expense
 
@@ -33,8 +38,8 @@ for amount in expense:
         lowest_expense = amount
 
 print("\nExpense Extremes: ")
-print("Highest Expanse: ", highest_expense)
-print("Lowest Expanse: ", lowest_expense)
+print(f"Highest Expanse :  {highest_expense}")
+print(f"Lowest Expanse  :  {lowest_expense}")
 
 #Spending insight based on Avegare 
 
