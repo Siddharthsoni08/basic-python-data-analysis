@@ -35,3 +35,13 @@ for amount in expense:
 print("\nExpense Extremes: ")
 print("Highest Expanse: ", highest_expense)
 print("Lowest Expanse: ", lowest_expense)
+
+#Spending insight based on Avegare 
+
+print("\nSpending Insight: ")
+if average_expense > 300:
+    print("Expence is High")
+elif average_expense >= 150:
+    print("Expense is Normal")
+else:
+    print("Expanse is Low")
