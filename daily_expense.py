@@ -21,3 +21,17 @@ print("Total Expense: ", total_expense)
 print("Number Of Days: ", days)
 print("Average Daily Expense: ", average_expense)
 
+#Find High and Low Expense
+
+highest_expense = expense[0]
+lowest_expense = expense[0]
+
+for amount in expense:
+    if amount > highest_expense:
+        highest_expense = amount
+    if amount < lowest_expense:
+        lowest_expense = amount
+
+print("\nExpense Extremes: ")
+print("Highest Expanse: ", highest_expense)
+print("Lowest Expanse: ", lowest_expense)
