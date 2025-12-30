@@ -2,7 +2,11 @@
 
 text = "python is easy and python is powerful"
 
-print("Original Text")
+print("\n" + "=" * 40)
+print("WORD FREQUENCY ANALYSIS REPORT")
+print("=" * 40)
+
+print("\nOriginal Text")
 print(text)
 
 #Split Text into Words
@@ -23,7 +27,8 @@ for word in words:
         word_count[word] = 1
 
 print("\nWord Frequency: ")
-print(word_count)
+for word, count in word_count.items():
+    print(f"{word:10} : {count}")
 
 #Find Most frequent Word
 
@@ -35,5 +40,5 @@ for word, count in word_count.items():
         highest_count = count
         most_frequent_word = word
 
-print("\nMost Frequent Wors :")
-print(most_frequent_word, "→", highest_count)
+print("\nMost Frequent Word :")
+print(f"{most_frequent_word} → {highest_count}")
