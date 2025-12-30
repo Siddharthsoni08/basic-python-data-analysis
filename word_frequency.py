@@ -24,3 +24,16 @@ for word in words:
 
 print("\nWord Frequency: ")
 print(word_count)
+
+#Find Most frequent Word
+
+most_frequent_word = ""
+highest_count = 0
+
+for word, count in word_count.items():
+    if count > highest_count:
+        highest_count = count
+        most_frequent_word = word
+
+print("\nMost Frequent Wors :")
+print(most_frequent_word, "→", highest_count)
