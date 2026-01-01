@@ -21,3 +21,16 @@ for item in cart:
 
 print("\nTotal Cart Price:")
 print("₹", total_price)
+
+#Remove an Item form Cart 
+
+item_to_remove = "Banana"
+
+for item in cart:
+    if item["name"] == item_to_remove:
+        cart.remove(item)
+        break
+
+print("\nUpdated Items:")
+for item in cart:
+    print(item["name"], "-", item["price"])
