@@ -8,6 +8,10 @@ cart = [
     {"name": "pen", "price": 10, "quantity": 1}
 ]
 
+print("\n" + "=" * 40)
+print("SHOPPING CART SUMMARY")
+print("=" * 40)
+
 print("Shopping Cart Items:")
 for item in cart:
     print(item["name"], "-", item["price"])
@@ -17,19 +21,22 @@ for item in cart:
 total_price = 0
 
 for item in cart:
-    total_item = item["price"] * item["quantity"]
-    total_price = total_price + total_item
+    item_total = item["price"] * item["quantity"]
+    total_price = total_price + item_total
 
 print("\nShopping Cart Item:")
 for item in cart:
+    item_total = item["price"] * item["quantity"]
     print(
-        item["name"],
-        "- Price:", item["price"],
-        "| Quantity:", item["quantity"]
+        f"{item["name"]:10} | "
+        f"Price: {item["price"]:3} | "
+        f"Qty: {item["quantity"]:2} | "
+        f"Total: ₹{item_total}"
     )
 
-print("\nTotal Cart Price:")
-print("₹", total_price)
+print("-" * 40)
+print(f"Grand Total: {total_price}")
+
 
 #Remove an Item form Cart 
 
@@ -39,7 +46,11 @@ for item in cart:
     if item["name"] == item_to_remove:
         cart.remove(item)
         break
-
+new_total_price = 0
 print("\nUpdated Items:")
 for item in cart:
-    print(item["name"], "-", item["price"])
+    item_total = item["price"] * item["quantity"]
+    new_total_price = new_total_price + item_total
+    print(f"{item["name"]:7} - {item["price"]} | Qty - {item['quantity']} | Total - {item_total} ")
+
+print(f"Grand Total: {new_total_price}")
