@@ -9,3 +9,12 @@ unique_values = set(values)
 
 print("\nUnique Values:")
 print(unique_values)
+
+#Count Total and Unique values 
+
+total_count = len(values)
+unique_values = len(unique_values)
+
+print("\nCounts:")
+print("Total Count:", total_count)
+print("Total Unique Count:", unique_values)
