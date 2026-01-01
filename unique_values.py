@@ -2,6 +2,11 @@
 
 values = [10, 20, 10, 30, 20, 40, 50, 30]
 
+print("\n" + "=" * 40)
+print("UNIQUE VALUE ANALYZER REPORT:")
+print("=" * 40)
+
+
 print("Orignal Values:")
 print(values)
 
@@ -16,8 +21,8 @@ total_count = len(values)
 unique_values_count = len(unique_values)
 
 print("\nCounts:")
-print("Total Count:", total_count)
-print("Total Unique Count:", unique_values)
+print(F"Total Count:          {total_count}")
+print(F"Total Unique Count:   {unique_values_count}")
 
 #Find Duplicate Values
 
@@ -28,4 +33,9 @@ for value in unique_values:
         duplicate.append(value)
 
 print("\nDuplicate Values")
-print(duplicate)
+if duplicate:
+    for val in duplicate:
+        print("-", val)
+    
+else:
+    print("NONE")
