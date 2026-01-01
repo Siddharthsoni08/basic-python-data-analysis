@@ -11,3 +11,13 @@ cart = [
 print("Shopping Cart Items:")
 for item in cart:
     print(item["name"], "-", item["price"])
+
+#calculate total cart price
+
+total_price = 0
+
+for item in cart:
+    total_price = total_price + item["price"]
+
+print("\nTotal Cart Price:")
+print("₹", total_price)
