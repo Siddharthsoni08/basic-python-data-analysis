@@ -32,4 +32,10 @@ print("Total Students:", total_students)
 print("Present:", present_count)
 print("Absent:", absent_count)
 
+# Calculate attendance percentage
+
+attendance_percentage = (present_count / total_students) * 100
+
+print("\nAttendance Percentage:")
+print(f"{attendance_percentage:.2f}%")
 
